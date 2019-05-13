@@ -156,6 +156,22 @@ public class MyLinkedList<E> {
         return delete(size - 1);
     }
 
+
+    // 删除指定元素
+    public void delete(E e) {
+        Node previous = dummyHead;
+        while (previous != null) {
+            Node current = previous.next;
+            if (current.e.equals(e)) {
+                previous.next = current.next;
+                current.next = null;
+                size--;
+                break;
+            }
+            previous = previous.next;
+        }
+    }
+
     @Override
     public String toString(){
         StringBuilder res = new StringBuilder();
