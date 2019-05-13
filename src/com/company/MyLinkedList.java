@@ -1,6 +1,6 @@
 package com.company;
 
-public class LinkedList<E> {
+public class MyLinkedList<E> {
 
     // 节点
     private class Node {
@@ -35,7 +35,7 @@ public class LinkedList<E> {
 
 
     // 初始化
-    public LinkedList() {
+    public MyLinkedList() {
         dummyHead = new Node(null, null);
         size = 0;
     }

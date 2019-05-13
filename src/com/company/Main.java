@@ -3,11 +3,55 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        testLinkedList();
+//        testLinkedList();
+
+        BST<Integer> bst = new BST<>();
+
+        bst.add(5);
+        bst.add(3);
+        bst.add(6);
+        bst.add(2);
+        bst.add(4);
+        bst.add(8);
+
+//        System.out.println(bst.getSize());
+//        System.out.println(bst.contains(6));
+//        System.out.println(bst.contains(1));
+
+
+//        bst.preOrder();
+
+//        System.out.println("========");
+//        System.out.println(bst);
+//
+//        System.out.println("========");
+//
+//        bst.levelOrder();
+
+
+        System.out.println("========");
+        System.out.println(bst);
+
+        System.out.println("删除最小节点========");
+        bst.removeMin();
+        System.out.println(bst);
+
+        System.out.println("删除最大节点========");
+        bst.removeMax();
+        System.out.println(bst);
+
+        System.out.println("删除节点元素 4 ========");
+        bst.remove(4);
+        System.out.println(bst);
+    }
+
+
+    private static void testBST() {
+
     }
 
     private static void testLinkedList() {
-        LinkedList<Integer> list = new LinkedList();
+        MyLinkedList<Integer> list = new MyLinkedList();
 
         for (int i = 0; i < 4; i++) {
             list.addFirst(i);
