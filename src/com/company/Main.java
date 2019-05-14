@@ -1,6 +1,7 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Set;
 
 public class Main {
@@ -10,8 +11,76 @@ public class Main {
 //        testBST();
 //        testBSTSet();
 //        testLinkedListSet();
-        testLinkedListMap();
+//        testLinkedListMap();
+
+//        testArray();
+        testMaxHeap();
     }
+
+    private static void testMaxHeap() {
+//        MaxHeap<Integer> maxHeap = new MaxHeap<>();
+//
+//        for (int i = 0; i < 6; i++) {
+//            int res = (int)(Math.random() * 100);
+//            maxHeap.add(res);
+//            System.out.println("add ========");
+//            System.out.println(maxHeap);
+//        }
+//
+//        System.out.println("finish ========");
+//        System.out.println(maxHeap);
+//
+//
+////        System.out.println("提取最大值 ========");
+////        int max = maxHeap.extractMax();
+////        System.out.println("max:" + max);
+////        System.out.println(maxHeap);
+//
+//        System.out.println("替换最大值 ========");
+//        int max = maxHeap.replace(1);
+//        System.out.println("max:" + max);
+//        System.out.println(maxHeap);
+
+        Integer[] array = {0, 2, 3, 5, 9, 10, 200, 100, 6};
+        MaxHeap<Integer> maxHeap = new MaxHeap<Integer>(array);
+        System.out.println(maxHeap);
+    }
+
+
+    private static void testArray() {
+
+        MyArray<Integer> array = new MyArray<>();
+        for (int i = 0; i < 5; i++) {
+            array.addAtLast(i);
+        }
+
+        System.out.println("add last===");
+        System.out.println(array);
+
+        System.out.println("add first===");
+        array.addAtFirst(100);
+        System.out.println(array);
+
+        System.out.println("add index 2===");
+        array.add(2, 300);
+        System.out.println(array);
+
+
+        System.out.println("remove first===");
+        array.removeFirst();
+        System.out.println(array);
+
+
+        System.out.println("remove last===");
+        array.removeLast();
+        System.out.println(array);
+
+        System.out.println("remove index 2===");
+        array.remove(2);
+        System.out.println(array);
+
+    }
+
 
     private static void testLinkedListMap() {
         MyLinkedListMap<String, String> map = new MyLinkedListMap<>();
